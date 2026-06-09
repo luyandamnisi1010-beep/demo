@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Demo App</string>
+    <string name="image">Logo</string>
+    <string name="morning_minutes">Morning-Minutes</string>
+    <string name="afternoon_minutes">Afternoon- Minutes</string>
+    <string name="activity_notes">Activity Notes</string>
 </resources>

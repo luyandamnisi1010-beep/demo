@@ -8,72 +8,71 @@
     tools:context=".MainActivity">
 
     <ImageView
+        android:id="@+id/logo"
         android:layout_width="match_parent"
         android:layout_height="175dp"
+        android:contentDescription="@string/image"
         android:src="@drawable/_logo"
-        android:id="@+id/logo"
         app:layout_constraintBottom_toTopOf="@+id/scroll"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <ScrollView
+        android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:id="@+id/scroll"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
-        android:layout_weight="-1"
-        android:layout_marginTop="15dp">
-
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
+            android:layout_margin="8dp"
             app:cardCornerRadius="10dp"
-            app:cardElevation="12dp"
-            android:id="@+id/card">
+            app:cardElevation="12dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:background="@drawable/cardview"
-                >
+                android:orientation="vertical"
+                android:padding="16dp">
 
                 <EditText
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:textSize="20sp"
-               android:gravity="center"
-               android:hint="Morning-Minutes"
-               android:text="" />
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="none"
+                    android:gravity="center"
+                    android:hint="@string/morning_minutes"
+                    android:inputType="text"
+                    android:textSize="20sp" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:gravity="center"
-                android:hint="Afternoon- Minutes"
-                android:text="" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="none"
+                    android:gravity="center"
+                    android:hint="@string/afternoon_minutes"
+                    android:inputType="text"
+                    android:textSize="20sp" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:gravity="center"
-                android:hint="Activity Notes"
-                android:text=""/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="none"
+                    android:gravity="center"
+                    android:hint="@string/activity_notes"
+                    android:inputType="textMultiLine"
+                    android:textSize="20sp" />
 
-        </LinearLayout>
+            </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
     </ScrollView>
-
-
-
-
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
